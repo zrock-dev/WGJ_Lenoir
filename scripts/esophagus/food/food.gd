@@ -1,13 +1,8 @@
 extends Area2D
 class_name Food
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-func _init(new_pos: Vector2):
-	position = new_pos
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func create(new_pos: Vector2):
+	self.position = new_pos
+	
+func _process(_delta):
+	self.position = Vector2(position.x, position.y - (position.y * .001))

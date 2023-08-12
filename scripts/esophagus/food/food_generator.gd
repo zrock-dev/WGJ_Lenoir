@@ -1,17 +1,20 @@
 extends Node
+class_name FoodGenerator
 
-var timer: Timer
-const FOOD_SPAWN_TIMEOUT: int = 0.5
+const FOOD_SPAWN_TIMEOUT: float = 2.0
 const FOOD_SPAWN_AMOUNT: int = 2
 
 # Screen boundaries
 var screen: Vector2
-var screen_width: int
-var screen_height: int
+var screen_width: float
+var screen_height: float
+
+var FoodScene = preload("res://scenes/esophagus/food/Food.tscn")
 
 func _ready():
+	var timer: Timer
 	timer = Timer.new()
-	timer.connect("spawn_timeout", on_spawn_food_piece)
+	timer.timeout.connect(on_spawn_food_piece)
 	timer.set_wait_time(FOOD_SPAWN_TIMEOUT)
 	timer.autostart = true
 	
@@ -24,9 +27,10 @@ func _ready():
 func on_spawn_food_piece() -> void:
 	var food: Food
 	for element in range(FOOD_SPAWN_AMOUNT-1):
-		food = Food.new(generate_random_position())
+		food = FoodScene.instantiate()
+		food.create(generate_random_position())
 		add_child(food)
 
 func generate_random_position() -> Vector2:
-	var x_pos := randi_range(0, screen_width)
+	var x_pos := randf_range(0, screen_width)
 	return Vector2(x_pos, screen_height)
