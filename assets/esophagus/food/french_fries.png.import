@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcyighjhy3g1p"
-path="res://.godot/imported/food_placeholder.png-71d008bdc84f08ec5227a90c7c4866e9.ctex"
+uid="uid://qcdi1pp2dxav"
+path="res://.godot/imported/french_fries.png-a24e597d02ba7038a0d22f9d15900ee3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/esophagus/food/food_placeholder.png"
-dest_files=["res://.godot/imported/food_placeholder.png-71d008bdc84f08ec5227a90c7c4866e9.ctex"]
+source_file="res://assets/esophagus/food/french_fries.png"
+dest_files=["res://.godot/imported/french_fries.png-a24e597d02ba7038a0d22f9d15900ee3.ctex"]
 
 [params]
 

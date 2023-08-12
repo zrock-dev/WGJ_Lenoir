@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cknlvvhq48uxy"]
+
+[ext_resource type="Script" path="res://scripts/esophagus/food/food.gd" id="1_6nw3b"]
+[ext_resource type="Texture2D" uid="uid://qcdi1pp2dxav" path="res://assets/esophagus/food/french_fries.png" id="2_o1hcs"]
+
+[node name="Food" type="Area2D"]
+position = Vector2(422, 378)
+script = ExtResource("1_6nw3b")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_o1hcs")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-37, 75, -65, -60, -58, -70, -68, -108, -65, -111, -54, -111, -47, -89, -41, -87, -51, -127, -51, -136, -38, -137, -38, -130, -35, -131, -28, -125, -26, -128, -18, -128, -14, -121, -4, -119, -8, -132, -4, -138, 7, -139, 25, -111, 27, -127, 34, -135, 39, -134, 40, -127, 28, -73, 33, -76, 43, -104, 49, -105, 53, -99, 45, -81, 57, -86, 64, -77, 64, -71, 42, 56, 27, 74, 6, 69, -7, 67)

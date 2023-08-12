@@ -9,7 +9,7 @@ var screen: Vector2
 var screen_width: float
 var screen_height: float
 
-var FoodScene = preload("res://scenes/esophagus/food/Food.tscn")
+var FoodScene := preload("res://scenes/esophagus/food/FrenchFries.tscn")
 
 func _ready():
 	var timer: Timer
