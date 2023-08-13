@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://qhwd08mh1ns2"]
+
+[ext_resource type="Texture2D" uid="uid://b0d61xmhb53q3" path="res://assets/Esofagopng.png" id="1_etgkr"]
+[ext_resource type="Script" path="res://scenes/Esophagus/EsophagusBackground.gd" id="1_ns71g"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ns71g")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_top = -39.0
+offset_right = 1150.0
+offset_bottom = 1048.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(562, 501)
+texture = ExtResource("1_etgkr")
