@@ -1,7 +1,7 @@
 extends Node
 class_name FoodGenerator
 
-const FOOD_SPAWN_TIMEOUT: float = 4.0
+const FOOD_SPAWN_TIMEOUT: float = 3.5
 const FOOD_SPAWN_AMOUNT: int = 1
 
 const LEFT_X_BOUNDARY: int = 165
@@ -42,5 +42,5 @@ func on_spawn_food_piece() -> void:
 	add_child(food)
 
 func generate_random_position() -> Vector2:
-	var x_pos := randf_range(LEFT_X_BOUNDARY-5, RIGHT_X_BOUNDARY-10)
-	return Vector2(x_pos, screen_height)
+	var x_pos := randf_range(LEFT_X_BOUNDARY+5, RIGHT_X_BOUNDARY-10)
+	return Vector2(x_pos, screen_height+30)
