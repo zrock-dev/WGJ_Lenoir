@@ -1,8 +1,8 @@
 [gd_scene load_steps=31 format=3 uid="uid://dh2p6c6c88u3p"]
 
-[ext_resource type="Texture2D" uid="uid://cpsk80f2u7rcd" path="res://assets/player/SpriteSheet-Character.png" id="1_mygvx"]
-[ext_resource type="Texture2D" uid="uid://dla4y67qx2b2m" path="res://assets/player/SpriteSheet-Floor.png" id="2_24hhj"]
-[ext_resource type="Texture2D" uid="uid://dnvpxpop4ydvl" path="res://assets/player/SpriteSheet-BlockMario.png" id="3_2e4wa"]
+[ext_resource type="Texture2D" path="res://assets/player/SpriteSheet-Character.png" id="1_mygvx"]
+[ext_resource type="Texture2D" path="res://assets/player/SpriteSheet-Floor.png" id="2_24hhj"]
+[ext_resource type="Texture2D" path="res://assets/player/SpriteSheet-BlockMario.png" id="3_2e4wa"]
 [ext_resource type="Script" path="res://scripts/player/Player.gd" id="4_2g1vi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2tu1"]
