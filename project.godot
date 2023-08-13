@@ -15,6 +15,12 @@ run/main_scene="res://scenes/World.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=1080
+window/size/resizable=false
+
 [input]
 
 rigth={

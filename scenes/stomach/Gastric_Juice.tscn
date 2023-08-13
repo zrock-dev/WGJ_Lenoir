@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsjct3by3hcpf"]
+
+[ext_resource type="Script" path="res://scripts/stomach/Gastric_Juice.gd" id="1_b0mfa"]
+[ext_resource type="Texture2D" uid="uid://bu3y7drqoaow5" path="res://assets/stomach/gastric_sea.png" id="1_y0wi1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8hdo"]
+atlas = ExtResource("1_y0wi1")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgo8p"]
+atlas = ExtResource("1_y0wi1")
+region = Rect2(800, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7xkc"]
+atlas = ExtResource("1_y0wi1")
+region = Rect2(0, 800, 800, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2kvlb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8hdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgo8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7xkc")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icwy2"]
+size = Vector2(801, 452)
+
+[node name="Gastric_Juice" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_b0mfa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2kvlb")
+animation = &"move"
+frame_progress = 0.412274
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 174)
+shape = SubResource("RectangleShape2D_icwy2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
