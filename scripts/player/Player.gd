@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 const MOVE_SPEED: int = 100
-const JUMP_SPEED: int = 200
+const JUMP_SPEED: int = 500
 
 const GRAVITY: float = 9.81
  

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcmmjeqeeawej"]
+
+[ext_resource type="Script" path="res://scripts/esophagus/food/food.gd" id="1_qik5l"]
+[ext_resource type="Texture2D" uid="uid://dlhq6kn3kaeiu" path="res://assets/esophagus/food/groceries.png" id="2_nxlri"]
+
+[node name="Food" type="Area2D"]
+position = Vector2(422, 378)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_qik5l")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_nxlri")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-88.1501, -93.8475)
+polygon = PackedVector2Array(25.293, 40.9903, 42.4359, 26.7046, 53.8644, 25.2761, 55.293, 6.70462, 78.1501, -1.86682, 103.864, -3.29538, 103.864, 5.27606, 122.436, -4.72394, 138.15, -3.29538, 139.579, 9.56177, 142.436, 16.7046, 159.579, 18.1332, 172.436, 30.9903, 173.864, 49.5618, 172.436, 58.1332, 173.864, 69.5617, 173.864, 79.5617, 163.864, 88.1332, 156.722, 99.5617, 143.864, 112.419, 129.579, 109.562, 125.293, 99.5617, 103.864, 119.562, 101.007, 150.99, 91.0073, 179.562, 91.0073, 190.99, 72.4359, 195.276, 61.0073, 183.847, 56.7216, 175.276, 62.4359, 152.419, 68.1501, 130.99, 58.1501, 108.133, 48.1501, 100.99, 42.4359, 96.7046, 41.0073, 90.9903, 29.5787, 80.9903, 28.1501, 65.276, 28.1501, 55.276)

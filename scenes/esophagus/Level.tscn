@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh0xtfkeieaty"]
+
+[ext_resource type="Script" path="res://scripts/esophagus/level.gd" id="1_3mn3f"]
+[ext_resource type="PackedScene" uid="uid://qhwd08mh1ns2" path="res://scenes/esophagus/EsophagusBackground.tscn" id="2_7i763"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_3mn3f")
+
+[node name="Background" parent="." instance=ExtResource("2_7i763")]
