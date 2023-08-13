@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://qhwd08mh1ns2"]
 
 [ext_resource type="Script" path="res://scripts/esophagus/esophagus_background.gd" id="1_ns71g"]
-[ext_resource type="Texture2D" uid="uid://b0d61xmhb53q3" path="res://assets/esophagus/food/background.png" id="2_gyoq4"]
+[ext_resource type="Texture2D" uid="uid://b0d61xmhb53q3" path="res://assets/esophagus/background/background.png" id="2_gyoq4"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ns71g")
@@ -20,9 +20,3 @@ color = Color(0, 0, 0, 1)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(562, 501)
 texture = ExtResource("2_gyoq4")
-
-[node name="start" type="Area2D" parent="."]
-position = Vector2(165, 643)
-
-[node name="End" type="Area2D" parent="."]
-position = Vector2(960, 638)
