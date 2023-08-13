@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://nssh3w4imnv7"]
 
-[ext_resource type="FontFile" uid="uid://bydbknlr8bkmw" path="res://assets/menu/04B_30__.TTF" id="1_m5lkm"]
-[ext_resource type="Script" path="res://scenes/Menu/control.gd" id="1_meykf"]
+[ext_resource type="Script" path="res://scripts/main_menu/main_menu.gd" id="1_odasv"]
+[ext_resource type="FontFile" uid="uid://bydbknlr8bkmw" path="res://assets/menu/04B_30__.TTF" id="2_xn4fv"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,7 +14,7 @@ offset_right = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-script = ExtResource("1_meykf")
+script = ExtResource("1_odasv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -40,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.0352941, 0.0313726, 0.00392157, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_m5lkm")
+theme_override_fonts/font = ExtResource("2_xn4fv")
 theme_override_font_sizes/font_size = 100
 text = "le 
 noir"
@@ -53,7 +53,6 @@ offset_top = 456.0
 offset_right = 358.0
 offset_bottom = 514.0
 theme_override_colors/font_color = Color(0.8, 0, 0.729412, 1)
-disabled = true
 
 [node name="Label" type="Label" parent="Button"]
 layout_mode = 1
@@ -70,7 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.776471, 0.239216, 0.913725, 0.933333)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_m5lkm")
+theme_override_fonts/font = ExtResource("2_xn4fv")
 theme_override_font_sizes/font_size = 50
 text = "jugar
 "
@@ -81,7 +80,6 @@ offset_left = 139.0
 offset_top = 528.0
 offset_right = 358.0
 offset_bottom = 585.0
-disabled = true
 
 [node name="Label" type="Label" parent="Button2"]
 layout_mode = 1
@@ -98,7 +96,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.72549, 0.223529, 0.85098, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_m5lkm")
+theme_override_fonts/font = ExtResource("2_xn4fv")
 theme_override_font_sizes/font_size = 50
 text = "salir"
 
