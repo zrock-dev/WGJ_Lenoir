@@ -12,7 +12,12 @@ var screen: Vector2
 var screen_width: float
 var screen_height: float
 
-var FoodScene := preload("res://scenes/esophagus/food/FrenchFries.tscn")
+var FrenchFries := preload("res://scenes/esophagus/food/FrenchFries.tscn")
+var Groceries := preload("res://scenes/esophagus/food/Carrot.tscn")
+var Carrot := preload("res://scenes/esophagus/food/Groceries.tscn")
+
+var food_objects := [FrenchFries, Groceries, Carrot]
+
 
 func _ready():
 	var timer: Timer
