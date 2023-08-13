@@ -4,6 +4,8 @@ class_name FoodGenerator
 const FOOD_SPAWN_TIMEOUT: float = 2.0
 const FOOD_SPAWN_AMOUNT: int = 2
 
+const LEFT_X_BOUNDARY: int = 165
+const RIGHT_X_BOUNDARY: int = 960
 # Screen boundaries
 var screen: Vector2
 var screen_width: float
@@ -32,5 +34,5 @@ func on_spawn_food_piece() -> void:
 		add_child(food)
 
 func generate_random_position() -> Vector2:
-	var x_pos := randf_range(0, screen_width)
+	var x_pos := randf_range(LEFT_X_BOUNDARY-5, RIGHT_X_BOUNDARY-5)
 	return Vector2(x_pos, screen_height)
