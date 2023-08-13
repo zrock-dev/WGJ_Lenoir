@@ -1,11 +1,12 @@
 extends Node
 class_name FoodGenerator
 
-const FOOD_SPAWN_TIMEOUT: float = 2.0
+const FOOD_SPAWN_TIMEOUT: float = 4.0
 const FOOD_SPAWN_AMOUNT: int = 2
 
 const LEFT_X_BOUNDARY: int = 165
 const RIGHT_X_BOUNDARY: int = 960
+
 # Screen boundaries
 var screen: Vector2
 var screen_width: float
@@ -25,6 +26,7 @@ func _ready():
 	screen_height = screen.y
 	
 	add_child(timer)
+	on_spawn_food_piece()
 
 func on_spawn_food_piece() -> void:
 	var food: Food
