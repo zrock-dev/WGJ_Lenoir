@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkgwav4k5vqdx"]
+
+[ext_resource type="Script" path="res://scripts/game_over/Game_Over.gd" id="1_52xef"]
+[ext_resource type="FontFile" uid="uid://bub18bnmevaqn" path="res://assets/gameOver/04B_30__.TTF" id="2_dwjjf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l4pgt"]
+line_spacing = 25.0
+font = ExtResource("2_dwjjf")
+font_size = 120
+
+[node name="game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 387.0
+offset_top = 505.0
+offset_right = 427.0
+offset_bottom = 545.0
+script = ExtResource("1_52xef")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.0
+offset_top = -489.0
+offset_right = 350.0
+offset_bottom = 509.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.811765, 0.498039, 0.501961, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -438.0
+offset_top = -387.0
+offset_right = 328.0
+offset_bottom = -95.0
+grow_horizontal = 2
+text = "Game   
+  Over"
+label_settings = SubResource("LabelSettings_l4pgt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="playAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = -160.0
+offset_top = 74.0
+offset_right = 190.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("2_dwjjf")
+theme_override_font_sizes/font_size = 40
+text = "Try Again"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = -95.0
+offset_top = 358.0
+offset_right = 94.0
+offset_bottom = 439.0
+theme_override_fonts/font = ExtResource("2_dwjjf")
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+
+[connection signal="pressed" from="playAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
